@@ -48,12 +48,12 @@ footer {
     padding-right: calc(20% - 50px); 
 }
 
-
-article {
+article .article-header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 20px;
 
+}
 article img {
     max-width: 100%;    
     min-height: 250px;
@@ -66,15 +66,4 @@ article .article-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-article .article-title p {
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-
-article .article-content {
-    grid-column-start: 1;
-    grid-column-end: 3;
 }
