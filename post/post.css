@@ -37,7 +37,7 @@ header nav ul{
 main {
     flex: 1;
     display: flex;
-    flex-direction: column;  
+    flex-direction: row;  
     margin-left: calc(20% - 50px);
     margin-right: calc(20% - 50px);  
 }
@@ -48,19 +48,34 @@ footer {
     padding-right: calc(20% - 50px); 
 }
 
-.avatar {
+article .article-header {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(20% + 10rem), 1fr));
+    grid-gap: 20px;
+}
+
+article .article-metadata {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+article .article-metadata .avatar {
     border-radius: 50%;
     width: 50px;
     height: 50px;
 }
 
-.list-item {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;    
-    margin: 0px;
-    padding: 8px 0px;
+article .article-header > .thumbnail {
+    max-width: 100%;    
+    min-height: 250px;
+    object-fit: cover;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
 }
-.list-item:not(:last-child) {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+article .article-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
